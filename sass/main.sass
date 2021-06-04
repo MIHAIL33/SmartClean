@@ -1,0 +1,108 @@
+@import bourbon
+@import vars.sass
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.s-choose-clean
+	padding-top: 50px
+	padding-bottom: 70px
+	.choose-button
+		padding-top: 30px
+		margin-bottom: 24px
+		text-align: center
+	h2
+		padding: 0px
+		text-align: center
+		text-transform: uppercase
+		font-size: em(36px)
+		margin: 50px 0px 100px
+	.choose-wrap
+		ul
+			li
+				list-style-type: disc
+				padding-bottom: 12px
+		h3
+			text-align: center
+			font-size: em(24px)
+			font-style: "OpenSansRegular", sans-serif
+		p
+			font-weight: bold
+			font-size: em(22px)
+			text-align: center
+			color: #0fa7d9
+			font-family: "OpenSansSemiBold", sans-serif
+		padding: 20px 20px 20px
+		margin-bottom: 50px
+		border: 2px solid #0fa7d9
+		border-radius: 5px
+		&:hover
+			border-color: #29bef0
+			p
+				color: #29bef0
+
+.s-how-work
+	background-color: #dedede
+	padding-top: 50px
+	padding-bottom: 0px
+	position: relative
+	h2
+		padding: 0px
+		text-align: center
+		text-transform: uppercase
+		font-size: em(36px)
+		margin: 50px 0px 100px
+	.work-wrap
+		text-align: center
+		.work-text
+			h3
+				margin: 25px 0px 4px
+				font-size: em(24px)
+				font-style: "OpenSansRegular", sans-serif
+			p
+				margin-bottom: 120px
+		.round-img
+			max-width: 70%
+			width: 55%
+		.position-1
+			position: absolute
+			top: 30px
+			right: -60px
+		.position-2
+			position: absolute
+			top: 30px
+			right: -60px
+		.position-3
+			position: absolute
+			top: 30px
+			right: -60px
+
+
+
+//ALWAYS END
+@import media
+
+//Load Libs SASS
+@import app/libs/fontawesome/css/all.sass
+@import app/libs/animate/animate.sass

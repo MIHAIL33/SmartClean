@@ -1,0 +1,275 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "OpenSansRegular", sans-serif
+	overflow-x: hidden
+
+.hidden
+	display: none
+
+h1, h2, h3, h4, h5, h6
+	font-family: "OpenSansLight", sans-serif
+	font-weight: normal
+
+h1
+	font-size: em(41px)
+	line-height: 1.2
+
+.ishome
+	h1
+		margin-top: 0
+
+h2
+	font-size: em(32px)
+
+h3, h4
+	font-family: "OpenSansSemiBold", sans-serif
+	font-size: em(15px)
+
+h4
+	font-size: em(13px)
+
+a
+	outline: none !important
+
+.text-center
+	text-align: center
+
+.hidden
+	display: none
+
+b, strong
+	font-family: "OpenSansSemiBold", sans-serif
+	font-weight: normal
+
+.main-head
+	background: linear-gradient( rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url(img/bg_top.png)
+	background-size: cover
+	background-position: top center
+	min-height: 100vh
+	overflow: hidden
+
+.mnu-line
+	padding-top: 30px
+
+.logo
+	display: block
+	width: 120px
+	img
+		width: 100%
+
+nav
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+
+.main-mnu
+	text-align: center
+	font-size: em(16px)
+	> ul
+		> li
+			> a
+				display: block
+				padding: 22px 20px
+				color: #dedede
+				+mt(.5s)
+				&:hover
+					color: #ffffff
+			&.active
+				a
+					color: #ffffff
+					text-decoration: underline
+
+.phone
+	padding-top: 14px
+	text-align: right
+	line-height: 1.6
+	.phone-wrap
+		color: #ffffff
+		font-family: "Exo2Bold", sans-serif
+		font-size: em(18px)
+		line-height: em(14px)
+		.fas
+			font-size: em(17px)
+			position: relative
+			top: 2px
+			margin-right: 5px
+	.callback
+		color: #dedede
+		display: inline-block
+		font-size: em(15px)
+		line-height: em(20px)
+		border-bottom: 1px dashed #dedede
+		+mt(.5s)
+		&:hover
+			text-decoration: none
+			border-color: #ffffff
+			color: #ffffff
+
+.header-content
+	padding: 12% 0 5%
+	.button
+		margin-top: 50px
+	h1
+		font-size: em(43px)
+		color: #ffffff
+	h2
+		color: #ffffff
+		font-weight: bold
+		font-size: em(24px)
+
+.button
+	display: inline-block
+	border: none
+	background-color: #0fa7d9
+	color: #ffffff
+	font-size: em(14px)
+	letter-spacing: 2px
+	text-transform: uppercase
+	padding: 13px 34px
+	border-radius: 3px
+	box-shadow: 0 4px 0 #0c7fa6
+	transition: all .2s ease
+	&:hover, &:focus
+		color: #ffffff
+		text-decoration: none
+	&:hover
+		background-color: #29bef0
+	&:active
+		background-color: #29bef0
+		transform: translateY(1px)
+
+.button-small
+	padding: 12px 20px 12px
+	text-align: center
+	font-size: em(12px)
+
+@keyframes drop
+  0%
+    top: 5px
+    opacity: 0
+
+  30%
+    top: 10px
+    opacity: 1
+
+  100%
+    top: 25px
+		opacity: 0
+
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #ffffff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+	&.on span
+		background-color: transparent
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	top: 10px
+	right: 15px
+
+.hidden-mnu
+	background-color: rgba(15, 167, 217, 0.4)
+	display: none
+	position: relative
+	top: 20px
+	li
+		display: block
+	> ul
+		> li
+			&.active
+				a
+					text-decoration: underline
+					color: #ffffff
+			> a
+				&:hover
+					color: #ffffff
+					background-color: #29bef0
+
+.arrow-1
+  cursor: pointer
+  position: relative
+  width: 80px
+  height: 50px
+  margin: 20px
+
+  div
+    position: relative
+    top: 20px
+    width: 70px
+    height: 4px
+    background-color: #0fa7d9
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2)
+    left: 0
+    display: block
+
+    &::after
+      content: ''
+      position: absolute
+      width: 20px
+      height: 4px
+      top: -6px
+      right: -4px
+      background-color: #0fa7d9
+      transform: rotate(45deg)
+
+    &::before
+      content: ''
+      position: absolute
+      width: 20px
+      height: 4px
+      top: 6px
+      right: -4px
+      background-color: #0fa7d9
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2)
+      transform: rotate(-45deg)
+
+  &:hover
+    animation: arrow-1 1s linear infinite
+
+@keyframes arrow-1
+  0%
+    left: 0
+
+  50%
+    left: 10px
+
+  100%
+    left: 0
