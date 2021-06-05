@@ -1,5 +1,11 @@
 $(function() {
 
+	$('.spoiler-body').css({'display':'none'});
+	$('.unit-wrap').click(function(){
+	   $(this).children('.spoiler-body').slideToggle(500)
+		 $(this).find('.circle').toggleClass("rotated-90 rotated-45")
+	});
+
 	function heightses() {
 		$(".s-choose-clean .choose-wrap h3").height('auto').equalHeights();
 		$(".s-choose-clean .choose-wrap .choose-text ul").height('auto').equalHeights();
