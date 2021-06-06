@@ -1,5 +1,11 @@
 $(function() {
 
+	$(".arrow-2").click(function() {
+		$("html, body").animate({
+			scrollTop : $(".s-choose-clean").offset().top
+		}, 1000);
+	});
+
 	$('.spoiler-body').css({'display':'none'});
 	$('.unit-wrap').click(function(){
 	   $(this).children('.spoiler-body').slideToggle(500)
