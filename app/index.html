@@ -9,6 +9,7 @@
 	<meta charset="utf-8">
 
 	<title>Заголовок</title>
+	<script type="text/javascript" src="js/calc.js"></script>
 	<meta name="description" content="">
 
 	<!-- Bootstrap v3.3.4 Grid Styles -->
@@ -479,23 +480,52 @@
 						<h2>Заказать уборку</h2>
 						<p>Свяжитесь с нами сейчас и получите <b>скидку 10%</b> на первый заказ!</p>
 					</dib>
-					<div class="order-form">
+
+					<form class="contact-form" method="post">
+
 						<label>
 							<span>Ваше имя:</span>
 							<input type="text" name="Имя" placeholder="Ваше имя..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
 						</label>
+
 						<label>
 							<span>Ваш e-mail:</span>
 							<input type="text" name="E-mail" placeholder="Ваш e-mail..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
 						</label>
+
 						<label>
 							<span>Ваш телефон:</span>
 							<input type="text" name="Телефон" placeholder="Ваше телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
 						</label>
+
+						<label>
+							<span>Услуга:</span>
+							<select name="Услуга">
+							<option>Стандартная уборка</option>
+							<option>Генеральная уборка</option>
+							<option>Генеральная VIP</option>
+							<option>Уборка после ремонта</option>
+							<option>Мытье окон</option>
+							<option>Озонирование</option>
+							</select>
+						</label>
+
+						<div class="slider">
+							<span id="rangeValue">10 м<sup>2</sup></span>
+							<input class="range" type="range" name="Количество квадратных метров" value="10" min="10" max="200" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+						</div>
+
+						<div class="cost">
+							<span>Стоимость:</span>
+							<label>0</label>
+						</div>
+
 						<div class="text-center">
 							<button class="button">Отправить заявку</button>
 						</div>
-					</div>
+
+					</form>
+
 				</div>
 
 			</div>

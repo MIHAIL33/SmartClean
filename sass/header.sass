@@ -365,3 +365,90 @@ nav
 		&:hover
 			span
 				border-color: #29bef0
+
+form
+	text-align: center
+	label
+		margin-bottom: 20px
+		display: block
+		span
+			font-size: em(16px)
+			color: #fff
+			display: block
+			margin-top: 3px
+		.selectize-control.single
+			.selectize-input
+				background-image: none
+				box-shadow: none
+				font-size: em(16px)
+				background-color: rgba(255,255,255,0.8)
+				padding: 11px 15px
+			.selectize-dropdown
+				border: none
+				.option
+					padding: 8px 15px
+				.active
+					background-color: #29bef0
+					color: #fff
+		input, select, .selectize-input
+			margin: 0 auto
+			display: block
+			color: #000 !important
+			background-color: rgba(255,255,255,0.8)
+			border-radius: 2px
+			border: none
+			padding: 9px 15px 7px
+			display: block
+			width: 500px
+			font-size: em(16px)
+		input:focus
+			outline-style: solid
+			outline-color: #29bef0
+
+.slider
+	margin-bottom: 20px
+	#rangeValue
+		display: block
+		text-align: center
+		font-size: em(24px)
+		color: #fff
+	.range
+		background-color: rgba(255,255,255,0.8)
+		width: 500px
+		outline: none
+		border-radius: 15px
+		overflow: hidden
+		-webkit-appearance: none
+	.range::-webkit-slider-thumb
+	  -webkit-appearance: none
+	  appearance: none
+	  width: 20px
+	  height: 20px
+	  border-radius: 50%
+	  background: #29bef0
+	  cursor: pointer
+	.range::-moz-range-thumb
+	  width: 15px
+	  height: 15px
+	  border-radius: 50%
+	  background: #29bef0
+	  cursor: pointer
+
+.cost
+	margin-bottom: 40px
+	span
+		font-size: em(16px)
+		color: #fff
+		display: block
+		margin-top: 3px
+	label
+		border-radius: 30px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 0 auto
+		background-color: rgba(255,255,255,0.8)
+		width: 250px
+		height: 60px
+		font-size: em(32px)
+		color: #000

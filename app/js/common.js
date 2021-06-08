@@ -1,5 +1,7 @@
 $(function() {
 
+	$("form select").selectize();
+
 	$(".arrow-2").click(function() {
 		$("html, body").animate({
 			scrollTop : $(".s-choose-clean").offset().top

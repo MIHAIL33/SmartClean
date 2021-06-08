@@ -41,7 +41,8 @@ gulp.task('scripts', function() {
 		'app/libs/jquery/jquery-1.11.2.min.js',
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/animate/animate-css.js',
-		'app/libs/equalHeights/jquery.equalheights.min.js'
+		'app/libs/equalHeights/jquery.equalheights.min.js',
+		'app/libs/selectize/dist/js/standalone/selectize.min.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js
