@@ -42,7 +42,8 @@ gulp.task('scripts', function() {
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/animate/animate-css.js',
 		'app/libs/equalHeights/jquery.equalheights.min.js',
-		'app/libs/selectize/dist/js/standalone/selectize.min.js'
+		'app/libs/selectize/dist/js/standalone/selectize.min.js',
+		'app/libs/jquery-animateNumber/jquery.animateNumber.min.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js

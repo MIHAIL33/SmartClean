@@ -1,6 +1,17 @@
 $(function() {
 
-	$("form select").selectize();
+	caclCost();
+
+	var $select = $("form select").selectize();
+	var selectizeControl = $select[0].selectize
+
+	$(".choose-button .button").click(function() {
+		var value = $(this).attr('id');
+		selectizeControl.setValue(value);
+		$("html, body").animate({
+			scrollTop : $(".s-order").offset().top
+		}, 1000);
+	});
 
 	$(".arrow-2").click(function() {
 		$("html, body").animate({

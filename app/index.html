@@ -85,7 +85,7 @@
 					<div class="col-lg-6 col-sm-8">
 						<h1>Уборка квартир, домов и офисов</h1>
 						<h2>Оказываем полный спектр услуг клининга квартир и частных домов во Владимире и области</h2>
-						<a href="#" class="button">Оставить заявку</a>
+						<a href="##" class="button" onclick="return caclCost();">Оставить заявку</a>
 					</div>
 
 				</div>
@@ -129,7 +129,7 @@
 							</ul>
 						</div>
 						<div class="choose-button">
-							<a href="#" class="button button-small">Рассчитать стоимость</a>
+							<a id="standart" href="##" class="button button-small">Рассчитать стоимость</a>
 						</div>
 					</div>
 				</div>
@@ -152,7 +152,7 @@
 							</ul>
 						</div>
 						<div class="choose-button">
-							<a href="#" class="button button-small">Рассчитать стоимость</a>
+							<a id="general" href="##" class="button button-small">Рассчитать стоимость</a>
 						</div>
 					</div>
 				</div>
@@ -176,7 +176,7 @@
 							</ul>
 						</div>
 						<div class="choose-button">
-							<a href="#" class="button button-small">Рассчитать стоимость</a>
+							<a id="vip" href="##" class="button button-small">Рассчитать стоимость</a>
 						</div>
 					</div>
 				</div>
@@ -197,7 +197,7 @@
 							</ul>
 						</div>
 						<div class="choose-button">
-							<a href="#" class="button button-small">Рассчитать стоимость</a>
+							<a id="repairs" href="##" class="button button-small">Рассчитать стоимость</a>
 						</div>
 					</div>
 				</div>
@@ -218,7 +218,7 @@
 							</ul>
 						</div>
 						<div class="choose-button">
-							<a href="#" class="button button-small">Рассчитать стоимость</a>
+							<a id="window" href="##" class="button button-small">Рассчитать стоимость</a>
 						</div>
 					</div>
 				</div>
@@ -237,7 +237,7 @@
 							</ul>
 						</div>
 						<div class="choose-button">
-							<a href="#" class="button button-small">Рассчитать стоимость</a>
+							<a id="ozon" href="##" class="button button-small">Рассчитать стоимость</a>
 						</div>
 					</div>
 				</div>
@@ -490,34 +490,34 @@
 
 						<label>
 							<span>Ваш e-mail:</span>
-							<input type="text" name="E-mail" placeholder="Ваш e-mail..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
+							<input type="text" name="E-mail" placeholder="Ваш e-mail...">
 						</label>
 
 						<label>
 							<span>Ваш телефон:</span>
-							<input type="text" name="Телефон" placeholder="Ваше телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
+							<input type="text" name="Телефон" placeholder="Ваш телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
 						</label>
 
 						<label>
 							<span>Услуга:</span>
-							<select name="Услуга">
-							<option>Стандартная уборка</option>
-							<option>Генеральная уборка</option>
-							<option>Генеральная VIP</option>
-							<option>Уборка после ремонта</option>
-							<option>Мытье окон</option>
-							<option>Озонирование</option>
+							<select id="select_bottom" name="Услуга" onChange="caclCost()">
+							<option value="standart">Стандартная уборка</option>
+							<option value="general">Генеральная уборка</option>
+							<option value="vip">Генеральная VIP</option>
+							<option value="repairs">Уборка после ремонта</option>
+							<option value="window">Мытье окон</option>
+							<option value="ozon">Озонирование</option>
 							</select>
 						</label>
 
 						<div class="slider">
 							<span id="rangeValue">10 м<sup>2</sup></span>
-							<input class="range" type="range" name="Количество квадратных метров" value="10" min="10" max="200" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+							<input id="slide_bottom" class="range" type="range" name="Количество квадратных метров" value="10" min="10" max="200" onChange="rangeSlide(this.value)" onmousemove="rangeSlideMouseMove(this.value)">
 						</div>
 
 						<div class="cost">
 							<span>Стоимость:</span>
-							<label>0</label>
+							<label id="cost" >0</label>
 						</div>
 
 						<div class="text-center">
