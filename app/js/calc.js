@@ -35,6 +35,6 @@ function caclCost() {
   $("#cost").animateNumber({ number: tcount,
     easing: 'easeInQuad',
     "font-size": "40px"},
-    1000);
+    500);
 
 }
