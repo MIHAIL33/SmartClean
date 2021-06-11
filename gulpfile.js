@@ -43,7 +43,8 @@ gulp.task('scripts', function() {
 		'app/libs/animate/animate-css.js',
 		'app/libs/equalHeights/jquery.equalheights.min.js',
 		'app/libs/selectize/dist/js/standalone/selectize.min.js',
-		'app/libs/jquery-animateNumber/jquery.animateNumber.min.js'
+		'app/libs/jquery-animateNumber/jquery.animateNumber.min.js',
+		'app/libs/Magnific-Popup/jquery.magnific-popup.min.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js

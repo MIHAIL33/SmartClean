@@ -1,5 +1,18 @@
 $(function() {
 
+	$("a[href='#callback']").magnificPopup({
+		mainClass: 'my-mfp-zoom-in',
+		removalDelay: 300,
+		type: 'inline',
+	});
+
+	$("a[href='#callback']").click(function() {
+		var dataForm = $(this).data("form");
+		var dataText = $(this).data("text");
+		$(".form-callback h4").text(dataText);
+		$(".form-callback [name=admin-data]").val(dataForm);
+	});
+
 	caclCost();
 
 	var $select = $("form select").selectize();
@@ -57,11 +70,13 @@ $(function() {
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			alert("Thank you!");
+			$(".form-callback .success").addClass("active");
 			setTimeout(function() {
 				// Done Functions
+				$(".form-callback .success").removeClass("active");
 				th.trigger("reset");
-			}, 1000);
+				$.magnificPopup.close();
+			}, 3000);
 		});
 		return false;
 	});
@@ -104,6 +119,21 @@ $(function() {
 		$img.replaceWith($svg);
 
 		}, 'xml');
+	});
+
+	$("body").append('<div class="top"><i class="fas fa-angle-double-up"></i></div>')
+
+	$("body").on("click", ".top", function() {
+		$("html, body").animate({scrollTop: 0}, "slow");
+		return false;
+	});
+
+	$(window).scroll(function() {
+		if($(this).scrollTop() > $(this).height()) {
+			$(".top").addClass("active");
+		} else {
+			$(".top").removeClass("active");
+		}
 	});
 
 });

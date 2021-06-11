@@ -26,10 +26,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="img/head_icons/logo.svg">
+	<link rel="apple-touch-icon" href="img/head_icons/logo.svg">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/head_icons/logo.svg">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/head_icons/logo.svg">
 
 </head>
 
@@ -47,12 +47,12 @@
 					</div>
 
 					<div class="col-lg-4 col-lg-push-6 col-md-6 col-sm-6 col-xs-12">
-						<div class="phone">				
+						<div class="phone">
 							<div class="phone-wrap">
 								<a href="https://www.instagram.com/smartt.clean"><div class="icons instagram"></div></a>
 								<i class="fas fa-mobile-alt"></i> +7 (920) 355-66-96
 							</div>
-							<a href="callback" class="callback">Заказать обратный звонок</a>
+							<a href="#callback" class="callback" data-form="Заказать обратный звонок: Верхняя" data-text="Заказать звонок">Заказать обратный звонок</a>
 						</div>
 						<a href="#" class="toggle-mnu hidden-lg"><span></span></a>
 					</div>
@@ -61,9 +61,9 @@
 						<nav class="main-mnu hidden-md hidden-sm hidden-xs">
 							<ul>
 								<li class="active"><a href="#">Главная</a></li>
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Как мы работаем?</a></li>
-								<li><a href="#">О нас</a></li>
+								<li><a href="#s-choose-clean">Услуги</a></li>
+								<li><a href="#s-how-work">Как мы работаем?</a></li>
+								<li><a href="#s-order">Рассчитать</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -72,9 +72,9 @@
 						<nav class="main-mnu hidden-mnu hidden-lg clearfix">
 							<ul>
 								<li class="active"><a href="#">Главная</a></li>
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Как мы работаем?</a></li>
-								<li><a href="#">О нас</a></li>
+								<li><a href="#s-choose-clean">Услуги</a></li>
+								<li><a href="#s-how-work">Как мы работаем?</a></li>
+								<li><a href="#s-order">Рассчитать</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -86,7 +86,7 @@
 					<div class="col-lg-6 col-sm-8">
 						<h1>Уборка квартир, домов и офисов</h1>
 						<h2>Оказываем полный спектр услуг клининга квартир и частных домов во Владимире и области</h2>
-						<a href="##" class="button" onclick="return caclCost();">Оставить заявку</a>
+						<a href="#callback" class="button" data-form="Отправить заявку: Шапка" data-text="Отправить заявку">Оставить заявку</a>
 					</div>
 
 				</div>
@@ -104,7 +104,7 @@
 
 	</header>
 
-	<section class="s-choose-clean">
+	<section id="s-choose-clean" class="s-choose-clean">
 
 		<div class="container">
 			<div class="row">
@@ -248,7 +248,7 @@
 
 	</section>
 
-	<section class="s-how-work">
+	<section id="s-how-work" class="s-how-work">
 
 		<div class="container">
 			<div class="row">
@@ -471,7 +471,7 @@
 
 	</section>
 
-	<section class="s-order">
+	<section id="s-order" class="s-order">
 
 		<div class="container">
 			<div class="row">
@@ -522,7 +522,7 @@
 						</div>
 
 						<div class="text-center">
-							<button class="button">Отправить заявку</button>
+							<button class="button" class="callback">Отправить заявку</button>
 						</div>
 
 					</form>
@@ -562,7 +562,7 @@
 							<div class="phone-wrap">
 								<i class="fas fa-mobile-alt"></i> +7 (920) 355-66-96
 							</div>
-							<a href="callback" class="callback">Заказать обратный звонок</a>
+							<a href="#callback" class="callback" data-form="Заказать обратный звонок: Нижняя" data-text="Заказать звонок">Заказать обратный звонок</a>
 						</div>
 						<br>
 						Site developed by MIHAIL_WAS<br>
@@ -575,7 +575,38 @@
 
 	</footer>
 
-	<div class="hidden"></div>
+	<div class="hidden">
+
+		<form id="callback" class="contact-form form-callback">
+
+			<div class="success">
+				<p>Спасибо за заявку!</p>
+			</div>
+
+			<input type="hidden" name="admin-data">
+
+			<div class="contact-form-head">
+				<h4>Оставить заявку</h4>
+				<p>Оставте заявку и мы свяжемся с вами в течение 20 минут.</p>
+			</div>
+
+			<label>
+				<span>Ваше имя:</span>
+				<input type="text" name="Имя" placeholder="Ваше имя..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
+			</label>
+
+			<label>
+				<span>Ваш телефон:</span>
+				<input type="text" name="Телефон" placeholder="Ваш телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
+			</label>
+
+			<div class="text-center">
+				<button class="button button-small">Отправить</button>
+			</div>
+
+		</form>
+
+	</div>
 
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
