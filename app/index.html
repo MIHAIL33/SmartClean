@@ -8,7 +8,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Заголовок</title>
+	<title>SmartClean</title>
 	<script type="text/javascript" src="js/calc.js"></script>
 	<meta name="description" content="">
 
@@ -84,8 +84,8 @@
 				<div class="header-content clearfix">
 
 					<div class="col-lg-6 col-sm-8">
-						<h1>Уборка квартир, домов и офисов</h1>
-						<h2>Оказываем полный спектр услуг клининга квартир и частных домов во Владимире и области</h2>
+						<h1>Уборка квартир, домов и коттеджей во Владимире</h1>
+						<h2>Оказываем полный спектр услуг клининга: уборка, мытье окон, химчистка, озонация, дезинфекция</h2>
 						<a href="#callback" class="button" data-form="Отправить заявку: Шапка" data-text="Отправить заявку">Оставить заявку</a>
 					</div>
 
@@ -111,28 +111,6 @@
 
 				<div class="col-sm-12">
 					<h2>Варианты уборки</h2>
-				</div>
-
-				<div class="col-md-4 col-sm-6">
-					<div class="choose-wrap">
-						<h3>Стандартная уборка</h3>
-						<div class="choose-text">
-							<p>от 3000 ₽</p>
-							<ul>
-								<li>Обеспыливание доступных поверхностей (фасады)</li>
-								<li>Мытье пола и плинтусов</li>
-								<li>Зеркальные поверхности</li>
-								<li>Пылесос (1 ковровое покрытие)</li>
-								<li>Варочная поверхность (средняя загрязненность)</li>
-								<li>Раковина</li>
-								<li>Санузел</li>
-								<li>Ванная (душевая кабина)</li>
-							</ul>
-						</div>
-						<div class="choose-button">
-							<a id="standart" href="##" class="button button-small">Рассчитать стоимость</a>
-						</div>
-					</div>
 				</div>
 
 				<div class="col-md-4 col-sm-6">
@@ -205,6 +183,25 @@
 
 				<div class="col-md-4 col-sm-6">
 					<div class="choose-wrap">
+						<h3>Химчистка</h3>
+						<div class="choose-text">
+							<p>от 3000 ₽</p>
+							<ul>
+								<li>Мягкая мебель</li>
+								<li>Ковры</li>
+								<li>Ковролин</li>
+								<li>Пятновыведение</li>
+								<li>Избавление от запаха</li>
+							</ul>
+						</div>
+						<div class="choose-button">
+							<a id="standart" href="##" class="button button-small">Рассчитать стоимость</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="choose-wrap">
 						<h3>Мытье окон</h3>
 						<div class="choose-text">
 							<p>от 250 ₽/м<sup>2</sup></p>
@@ -267,7 +264,7 @@
 						</div>
 						<div class="work-text">
 							<h3>Заявка</h3>
-							<p>Оставьте заявку на сайте и получите <b>скидку 10%</b> на первый заказ</p>
+							<p>Оставьте заявку на сайте</p>
 						</div>
 					</div>
 				</div>
@@ -479,10 +476,14 @@
 				<div class="col-sm-12">
 					<div class="order-h">
 						<h2>Заказать уборку</h2>
-						<p>Свяжитесь с нами сейчас и получите <b>скидку 10%</b> на первый заказ!</p>
-					</dib>
+						<p>Заполните форму и мы свяжемся с вами!</p>
+					</div>
 
-					<form class="contact-form" method="post">
+					<form class="contact-form bottom-form" method="post">
+
+						<input type="hidden" name="project_name" value="SmartClean">
+						<input type="hidden" name="admin_email" value="admin@smartclean33.ru">
+						<input type="hidden" name="form_subject" value="Заявка с нижней формы">
 
 						<label>
 							<span>Ваше имя:</span>
@@ -496,18 +497,15 @@
 
 						<label>
 							<span>Ваш телефон:</span>
-							<input type="text" name="Телефон" placeholder="Ваш телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
+							<input class="phone-inputmask" type="tel" pattern="\+7 \(\d+\) \d+-\d+" name="Телефон" placeholder="Ваш телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
 						</label>
 
 						<label>
 							<span>Услуга:</span>
 							<select id="select_bottom" name="Услуга" onChange="caclCost()">
-							<option value="standart">Стандартная уборка</option>
 							<option value="general">Генеральная уборка</option>
-							<option value="vip">Генеральная VIP</option>
 							<option value="repairs">Уборка после ремонта</option>
 							<option value="window">Мытье окон</option>
-							<option value="ozon">Озонирование</option>
 							</select>
 						</label>
 
@@ -517,12 +515,12 @@
 						</div>
 
 						<div class="cost">
-							<span>Стоимость:</span>
+							<span>Примерная стоимость:</span>
 							<label id="cost">0</label>
 						</div>
 
 						<div class="text-center">
-							<button class="button" class="callback">Отправить заявку</button>
+							<button class="button callback">Отправить заявку</button>
 						</div>
 
 					</form>
@@ -541,7 +539,7 @@
 
 				<div class="col-sm-4">
 					<div class="main-left-foot">
-						© 2021 SmartClean<br>
+						© 2020-2022 SmartClean<br>
 						Клининговая компания<br>
 						Качественная комплексная уборка помещений и фасадов во Владимире и Владимирской области
 					</div>
@@ -579,6 +577,10 @@
 
 		<form id="callback" class="contact-form form-callback">
 
+			<input type="hidden" name="project_name" value="SmartClean">
+			<input type="hidden" name="admin_email" value="admin@smartclean33.ru">
+			<input type="hidden" name="form_subject" value="Заявка с краткой формы">
+
 			<div class="success">
 				<p>Спасибо за заявку!</p>
 			</div>
@@ -587,7 +589,7 @@
 
 			<div class="contact-form-head">
 				<h4>Оставить заявку</h4>
-				<p>Оставте заявку и мы свяжемся с вами в течение 20 минут.</p>
+				<p>Оставьте заявку и мы свяжемся с вами в течение 30 минут.</p>
 			</div>
 
 			<label>
@@ -597,7 +599,7 @@
 
 			<label>
 				<span>Ваш телефон:</span>
-				<input type="text" name="Телефон" placeholder="Ваш телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
+				<input class="phone-inputmask" type="tel" pattern="\+7 \(\d+\) \d+-\d+" name="Телефон" placeholder="Ваш телефон..." required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле!')" oninput="setCustomValidity('')">
 			</label>
 
 			<div class="text-center">

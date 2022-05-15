@@ -76,10 +76,20 @@ $(function() {
 				$(".form-callback .success").removeClass("active");
 				th.trigger("reset");
 				$.magnificPopup.close();
-			}, 3000);
+			}, 1500);
 		});
 		return false;
 	});
+
+	$(".bottom-form").submit(function() {
+		setTimeout(function() {
+			alert("Спасибо за заявку!")
+		}, 1000);
+	})
+
+	$(".phone-inputmask").inputmask({
+		mask: "+7 (999) 999-9999"
+	})
 
 	//Chrome Smooth Scroll
 	try {

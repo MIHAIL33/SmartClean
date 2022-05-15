@@ -1,5 +1,5 @@
 var gulp         = require('gulp'),
-		sass         = require('gulp-sass'),
+		sass         = require('gulp-sass')(require('sass')),
 		autoprefixer = require('gulp-autoprefixer'),
 		cleanCSS     = require('gulp-clean-css'),
 		rename       = require('gulp-rename'),
@@ -44,7 +44,8 @@ gulp.task('scripts', function() {
 		'app/libs/equalHeights/jquery.equalheights.min.js',
 		'app/libs/selectize/dist/js/standalone/selectize.min.js',
 		'app/libs/jquery-animateNumber/jquery.animateNumber.min.js',
-		'app/libs/Magnific-Popup/jquery.magnific-popup.min.js'
+		'app/libs/Magnific-Popup/jquery.magnific-popup.min.js',
+		'app/libs/inputmask/jquery.inputmask.min.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js
