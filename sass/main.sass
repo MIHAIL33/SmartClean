@@ -27,6 +27,7 @@ body textarea:required:valid
 //Custom Styles Here
 .s-choose-clean
 	padding-top: 50px
+	background-color: #ffffff
 	padding-bottom: 70px
 	.choose-button
 		padding-top: 30px
@@ -108,7 +109,7 @@ body textarea:required:valid
 		color: #ffffff
 	padding-top: 50px
 	padding-bottom: 90px
-	background-color: rgba(0, 0, 0, 0.45)
+	background-color: #8c8c8c
 	.question-wrap
 		.unit-wrap
 			background-color: #ffffff
@@ -132,12 +133,22 @@ body textarea:required:valid
 						background-color: #ffffff
 
 .s-order
-	background: linear-gradient( rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url(img/bg_bottom.png)
-	background-attachment: fixed
-	background-size: cover
-	background-position: top center
 	overflow: hidden
+	position: relative
 	padding-bottom: 60px
+	&::before
+		content: ''
+		background: linear-gradient(rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url(img/bg_bottom.png)
+		position: fixed
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		will-change: transform
+		background-color: white
+		background-size: cover
+		background-position: top center
+		z-index: -1
 	.order-h
 		h2
 			padding: 0px
