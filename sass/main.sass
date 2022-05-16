@@ -136,6 +136,13 @@ body textarea:required:valid
 	overflow: hidden
 	position: relative
 	padding-bottom: 60px
+	.text-personal-data
+		p
+			font-size: em(14px)
+			color: #fff
+		a
+			color: #29bef0
+			cursor: pointer
 	&::before
 		content: ''
 		background: linear-gradient(rgba(0,0,0,0.33), rgba(0,0,0,0.33)), url(img/bg_bottom.png)
@@ -165,7 +172,6 @@ body textarea:required:valid
 			font-size: em(22px)
 			color: #ffffff
 			margin: 0px
-			margin-bottom: 30px
 			font-family: "OpenSansSemiBold", sans-serif
 
 footer
@@ -184,8 +190,13 @@ footer
 	.main-right-foot
 		text-align: right
 
-
 .form-callback
+	.text-personal-data
+		p
+			font-size: em(13px)
+		a
+			color: #29bef0
+			cursor: pointer
 	padding-bottom: 20px
 	h4
 		font-size: em(16px)
