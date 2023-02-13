@@ -1,11 +1,11 @@
 var gulp         = require('gulp'),
-		sass         = require('gulp-sass')(require('sass')),
-		autoprefixer = require('gulp-autoprefixer'),
-		cleanCSS     = require('gulp-clean-css'),
-		rename       = require('gulp-rename'),
-		browserSync  = require('browser-sync').create(),
-		concat       = require('gulp-concat'),
-		uglify       = require('gulp-uglify-es').default;
+	sass         = require('gulp-sass')(require('sass')),
+	autoprefixer = require('gulp-autoprefixer'),
+	cleanCSS     = require('gulp-clean-css'),
+	rename       = require('gulp-rename'),
+	browserSync  = require('browser-sync').create(),
+	concat       = require('gulp-concat'),
+	uglify       = require('gulp-uglify-es').default;
 
 gulp.task('browser-sync', function() {
 	browserSync.init({
