@@ -40,6 +40,7 @@ $(function() {
 
 	function heightses() {
 		$(".s-choose-clean .choose-wrap h3").height('auto').equalHeights();
+		$(".s-choose-clean .choose-wrap p").height('auto').equalHeights();
 		$(".s-choose-clean .choose-wrap .choose-text ul").height('auto').equalHeights();
 	}
 
