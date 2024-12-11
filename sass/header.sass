@@ -95,6 +95,7 @@ nav
 					text-decoration: underline
 
 .phone
+	display: block
 	padding-top: 14px
 	text-align: right
 	line-height: 1.6
@@ -458,8 +459,9 @@ form
 		font-size: em(32px)
 		color: #000
 
-.icons
-	margin: 15px auto 15px
+.icons-t
+	display: inline-block
+	margin: 15px 3px 
 	width: 30px
 	height: 30px
 .instagram
@@ -472,3 +474,29 @@ form
 		background-size: 100% 100%
 		background-repeat: no-repeat
 		background-position: center center
+.vkontakte
+	background-image: url(img/icons/vk-gray.png)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	background-position: center center
+	&:hover
+		background-image: url(img/icons/vk.png)
+		background-size: 100% 100%
+		background-repeat: no-repeat
+		background-position: center center
+.telegram
+	background-image: url(img/icons/telegram-gray.png)
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	background-position: center center
+	&:hover
+		background-image: url(img/icons/telegram.png)
+		background-size: 100% 100%
+		background-repeat: no-repeat
+		background-position: center center
+
+.icons-wrapper
+	display: flex
+	justify-content: flex-end
+	height: 100%
+
